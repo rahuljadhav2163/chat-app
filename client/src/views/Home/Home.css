@@ -53,6 +53,7 @@
     background-color: #e7e7e7; /* Light gray color for received messages */
     color: #000; /* Black text color for received messages */
     margin-right: auto; /* Move received messages to the left */
+    width: 70%;
   }
   /* Add these styles to your existing CSS */
 .chat-container {
