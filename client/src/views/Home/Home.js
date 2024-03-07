@@ -17,7 +17,7 @@ function Home() {
 
   const loadUsers = async () => {
     try {
-      const { data } = await axios.get('/users');
+      const { data } = await axios.get('/api/users');
       setUsers(data.data);
     } catch (error) {
       console.log(error);

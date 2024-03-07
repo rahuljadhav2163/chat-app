@@ -4,7 +4,8 @@ import md5 from 'md5';
 import mongoose from 'mongoose';
 import { Server } from 'socket.io';
 dotenv.config();
-
+import path from 'path';
+const __dirname = path.resolve();
 import Message from './models/Message.js';
 import User from './models/User.js';
 
@@ -41,13 +42,20 @@ app.get('/sendMessage', (req, res) => {
   res.status(200).json({ message: 'Message sent' });
 });
 
+app.get('/api/health', (req, res) => {
+ 
+
+  res.status(200).json({ message: 'all good' });
+});
+
+
 const connectDB = async () => {
   await mongoose.connect(process.env.MONGO_URI);
   console.log(`MongoDB Connected`);
 };
 connectDB();
 
-app.post('/signup', async (req, res) => {
+app.post('/api/signup', async (req, res) => {
   const { email, password, fullName } = req.body;
 
   try {
@@ -64,7 +72,7 @@ app.post('/signup', async (req, res) => {
   }
 });
 
-app.post('/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
@@ -80,11 +88,16 @@ app.post('/login', async (req, res) => {
 });
 
 
-app.get('/users', async (req, res) => {
+app.get('/api/users', async (req, res) => {
   const users = await User.find({}).select('_id fullName email');
   res.status(200).json({ data: users });
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
+
+  app.get('*', (req, res) => { res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html')) });
+}
 
 const PORT = 5001;
 

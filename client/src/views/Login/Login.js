@@ -7,7 +7,7 @@ function Login() {
 
   const loginNow = async () => {
     try {
-      const { data } = await axios.post('/login', { email, password });
+      const { data } = await axios.post('/api/login', { email, password });
       alert(data.message);
       if (data) {
         localStorage.setItem('user', JSON.stringify(data?.data));

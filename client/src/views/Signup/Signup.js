@@ -8,7 +8,7 @@ function Signup() {
   
 
   const signup = async () => {
-    const responce = await axios.post("/signup",
+    const responce = await axios.post("/api/signup",
         {
             fullName:name,
             email: email,
