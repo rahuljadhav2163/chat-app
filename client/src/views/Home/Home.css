@@ -24,9 +24,9 @@
 }
 
 @media screen and (max-width: 600px) {
-    /* Adjust styles for screens with a maximum width of 600px (typical mobile screens) */
+    
     .input-msg,  .input-select {
-        width: 90%; /* Adjust the width for better mobile layout */
+        width: 90%; 
     }
     .div{
         width: 90%;
@@ -43,21 +43,21 @@
 }
 
 .chatbox-sent {
-    background-color: #4caf50; /* Green color for sent messages */
-    color: #fff; /* White text color for sent messages */
-    margin-left: auto; /* Move sent messages to the right */
+    background-color: #4caf50; 
+    color: #fff; 
+    margin-left: auto; 
     width: 60%;
   }
   
   .chatbox-received {
-    background-color: #e7e7e7; /* Light gray color for received messages */
-    color: #000; /* Black text color for received messages */
-    margin-right: auto; /* Move received messages to the left */
+    background-color: #e7e7e7;
+    color: #000; 
+    margin-right: auto; 
     width: 70%;
   }
-  /* Add these styles to your existing CSS */
+ 
 .chat-container {
-    overflow-y: auto; /* Enable vertical scrolling for the chat container */
+    overflow-y: auto; 
   }
   
   .chatbox {
