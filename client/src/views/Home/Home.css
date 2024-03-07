@@ -1,0 +1,128 @@
+.div{
+    position: relative;
+    height: 500px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin: 20px auto;
+}
+.input-msg{
+    position: absolute;
+    top: 450px;
+    left: 15px;
+    width: 250px;
+}
+.btn-send{
+    position: absolute;
+    top: 450px;
+    right: 5px;
+    background-color: rgb(58, 98, 243);
+}
+.input-select{
+    width: 200px;
+    display: block;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 600px) {
+    /* Adjust styles for screens with a maximum width of 600px (typical mobile screens) */
+    .input-msg,  .input-select {
+        width: 90%; /* Adjust the width for better mobile layout */
+    }
+    .div{
+        width: 90%;
+        height: 450px;
+    }
+    .btn-send{
+        width: 119px;
+        top: 400px;
+    }
+    .input-msg{
+        width: 180px;
+        top: 400px;
+    }
+}
+
+.chatbox-sent {
+    background-color: #4caf50; /* Green color for sent messages */
+    color: #fff; /* White text color for sent messages */
+    margin-left: auto; /* Move sent messages to the right */
+    width: 60%;
+  }
+  
+  .chatbox-received {
+    background-color: #e7e7e7; /* Light gray color for received messages */
+    color: #000; /* Black text color for received messages */
+    margin-right: auto; /* Move received messages to the left */
+  }
+  /* Add these styles to your existing CSS */
+.chat-container {
+    overflow-y: auto; /* Enable vertical scrolling for the chat container */
+  }
+  
+  .chatbox {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .chatbox-sent {
+    background-color: #4caf50; 
+    color: #fff; 
+    margin-left: auto; 
+    text-align: right; 
+  }
+  
+  .chatbox-received {
+    background-color: #e7e7e7; 
+    color: #000; 
+    margin-right: auto;
+    text-align: left;
+  }
+  
+  .user-name {
+    margin-right: 250px;
+    margin-bottom: 5px;
+  }
+  
+  .message-text {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  
+  .timestamp {
+    font-size: 0.8em;
+    color: black;
+    margin-bottom: 1px;
+  }
+  
+  .input-msg,
+  .btn-send {
+    margin-top: 10px;
+  }
+  
+ 
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    
+    overflow-y: scroll;
+    height: 300px;
+  }
+  
+  .chatbox {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    align-self: flex-end; }
+  
+  .chatbox-received {
+    background-color: #e7e7e7;
+    color: #000;
+    margin-right: 10px; 
+    align-self: flex-start; 
+  }
+  
+  
+  
