@@ -3,7 +3,7 @@ import axios from 'axios';
 import { io } from 'socket.io-client';
 import './Home.css';
 
-const socket = io('http://localhost:5002');
+const socket = io('https://chat-app-tqlj.onrender.com');
 
 function Home() {
   const [message, setMessage] = useState('');

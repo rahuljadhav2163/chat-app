@@ -14,7 +14,7 @@ app.use(express.json());
 
 const io = new Server(5002, {
   cors: {
-    origin: '*',
+    origin: 'https://chat-app-tqlj.onrender.com',
   },
 });
 
